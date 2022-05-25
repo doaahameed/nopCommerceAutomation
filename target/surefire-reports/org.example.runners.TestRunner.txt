@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------
+Test set: org.example.runners.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 15, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 152.751 s <<< FAILURE! - in org.example.runners.TestRunner
+runScenario(org.example.runners.TestRunner)  Time elapsed: 9.417 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+
+runScenario(org.example.runners.TestRunner)  Time elapsed: 17.74 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for url to contain "https://demo.nopcommerce.com/iphone-6". Current url: "https://demo.nopcommerce.com/" (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'DESKTOP-N4RDRK4', ip: '192.168.100.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\MohD_\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57264}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57264/devtoo..., se:cdpVersion: 101.0.4951.67, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fee26b033bb44ff3100e2211754fab9a
+
+runScenario(org.example.runners.TestRunner)  Time elapsed: 9.23 s  <<< FAILURE!
+java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+

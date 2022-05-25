@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="15" time="150.863">
+<testcase classname="1-Registration - User should be able to register a new account" name="user registers with valid data" time="16.478">
+<system-out><![CDATA[Given user clicks on register button........................................passed
+When user enters personal details...........................................passed
+And user enters company details.............................................passed
+And user enters password....................................................passed
+And user hits register......................................................passed
+Then user registers successfully to nop commerce............................passed
+]]></system-out>
+</testcase>
+<testcase classname="2-Login - user can login successfully with valid credentials" name="user logins with valid credentials" time="12.813">
+<system-out><![CDATA[Given user clicks on login button...........................................passed
+When user enters valid "automationtest@gmail.com" and "doaa123".............passed
+And user hits login.........................................................passed
+Then user logins successfully and redirected to home page...................passed
+]]></system-out>
+</testcase>
+<testcase classname="3-Currency switch - user should be able to switch currency from US Dollar to Euro" name="guest user switches between currencies [$,€]" time="8.878">
+<system-out><![CDATA[Given guest user clicks on currency menu....................................passed
+When guest user selects Euro currency.......................................passed
+Then currency should be changed to Euro.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="4-Search - guest user should be able to search for any product" name="guest user searches for a product keyword and view results successfully" time="8.392">
+<system-out><![CDATA[Given guest user clicks on search tab.......................................passed
+When guest user enters search keyword "Book"................................passed
+And guest user hits enter to search.........................................passed
+Then search results are displayed for user with relevant data...............passed
+]]></system-out>
+</testcase>
+<testcase classname="4-Search - guest user should be able to search for any product" name="guest user searches with sku and view results successfully" time="9.044">
+<system-out><![CDATA[Given guest user clicks on search tab.......................................passed
+When guest user enters search sku "PRIDE_PRJ"...............................passed
+And guest user hits enter to search.........................................passed
+Then search results are displayed for user with relevant data...............passed
+]]></system-out>
+</testcase>
+<testcase classname="user should be able to hover categories and select sub category" name="user could hover categories and select sub category" time="11.825">
+<system-out><![CDATA[Given user hovers over category.............................................passed
+When user selects sub category..............................................passed
+Then page redirects to sub category products list...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="6-Home slider - user should be able to click on any slider to view related products" name="user clicks on first slider and got redirected to relevant product page" time="9.417">
+<failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[When user click on first slider.............................................passed
+Then related product page opens for first slider............................failed
+
+StackTrace:
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:976)
+	at org.testng.Assert.assertEquals(Assert.java:1010)
+	at org.example.stepDefinitions.TC06_homeSliderStepDefinition.related_product_page_opens_for_first_slider(TC06_homeSliderStepDefinition.java:24)
+	at ✽.related product page opens for first slider(file:///C:/Users/MohD_/Documents/Udacity/nopCommerceAutomation/src/main/resources/features/TS06_sliderFeature.feature:6)
+]]></failure>
+</testcase>
+<testcase classname="6-Home slider - user should be able to click on any slider to view related products" name="user clicks on second slider and got redirected to relevant product page" time="17.718">
+<failure message="Expected condition failed: waiting for url to contain &quot;https://demo.nopcommerce.com/iphone-6&quot;. Current url: &quot;https://demo.nopcommerce.com/&quot; (tried for 5 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.1.4', revision: '535d840ee2'&#10;System info: host: 'DESKTOP-N4RDRK4', ip: '192.168.100.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\MohD_\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57264}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57264/devtoo..., se:cdpVersion: 101.0.4951.67, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: fee26b033bb44ff3100e2211754fab9a" type="org.openqa.selenium.TimeoutException"><![CDATA[When user clicks on second slider...........................................passed
+Then related product page opens for second slider...........................failed
+
+StackTrace:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain "https://demo.nopcommerce.com/iphone-6". Current url: "https://demo.nopcommerce.com/" (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'DESKTOP-N4RDRK4', ip: '192.168.100.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\MohD_\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57264}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57264/devtoo..., se:cdpVersion: 101.0.4951.67, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fee26b033bb44ff3100e2211754fab9a
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.stepDefinitions.TC06_homeSliderStepDefinition.related_product_page_opens_for_second_slider(TC06_homeSliderStepDefinition.java:37)
+	at ✽.related product page opens for second slider(file:///C:/Users/MohD_/Documents/Udacity/nopCommerceAutomation/src/main/resources/features/TS06_sliderFeature.feature:10)
+]]></failure>
+</testcase>
+<testcase classname="user should be able to open all follow us links" name="user can open Facebook link" time="7.639">
+<system-out><![CDATA[When user clicks on facebook icon...........................................passed
+Then facebook should open page url in new tab...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user should be able to open all follow us links" name="user can open Twitter link" time="9.022">
+<system-out><![CDATA[When user clicks on twitter icon............................................passed
+Then twitter should open page url in new tab................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user should be able to open all follow us links" name="user can open newsletter link" time="9.207">
+<failure message="Index: 1, Size: 1" type="java.lang.IndexOutOfBoundsException"><![CDATA[When user clicks on newsletter icon.........................................passed
+Then newsletter should open page url in new tab.............................failed
+
+StackTrace:
+java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
+	at java.util.ArrayList.get(ArrayList.java:435)
+	at org.example.stepDefinitions.TC07_followUsStepDefinition.newsletter_opens_page_url_in_new_tab(TC07_followUsStepDefinition.java:55)
+	at ✽.newsletter should open page url in new tab(file:///C:/Users/MohD_/Documents/Udacity/nopCommerceAutomation/src/main/resources/features/TS07_followUsFeature.feature:17)
+]]></failure>
+</testcase>
+<testcase classname="user should be able to open all follow us links" name="user can open Youtube link" time="9.914">
+<system-out><![CDATA[When user clicks on youtube icon............................................passed
+Then youtube should open page url in new tab................................passed
+]]></system-out>
+</testcase>
+<testcase classname="8- Wishlist - user should be able to add products to wishlist" name="user adds product to wishlist and success message displays successfully" time="5.72">
+<system-out><![CDATA[When user adds product to his wishlist......................................passed
+Then addition success message should be displayed...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="8- Wishlist - user should be able to add products to wishlist" name="number of wishlist items increased successfully" time="5.619">
+<system-out><![CDATA[When user adds product to his wishlist......................................passed
+Then addition success message should be displayed...........................passed
+Then user gets number of products in wishlist...............................passed
+And number of wishlist items increased......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="9-Shopping Cart - user should be able to add products to shopping cart" name="user adds products successfully to shopping cart" time="8.64">
+<system-out><![CDATA[Given user selects a category...............................................passed
+When user adds product to his shopping cart.................................passed
+Then shopping cart success message should be displayed......................passed
+And shopping cart count increased...........................................passed
+]]></system-out>
+</testcase>
+</testsuite>
