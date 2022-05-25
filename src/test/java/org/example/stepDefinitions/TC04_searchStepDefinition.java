@@ -36,12 +36,12 @@ public class TC04_searchStepDefinition {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(actualResult.contains(expectedResult));
         int size = Hooks.driver.findElements(By.cssSelector("[class ='product-item']")).size();
-        softAssert.assertTrue(size>0);
+        softAssert.assertTrue(size > 0);
         softAssert.assertAll();
     }
 
     @When("^guest user enters search sku \"(.*)\"$")
-    public void guest_user_enters_search_sku(String sku){
+    public void guest_user_enters_search_sku(String sku) {
         searchPage.searchTab().sendKeys(sku);
     }
 }

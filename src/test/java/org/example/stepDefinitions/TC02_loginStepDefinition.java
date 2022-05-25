@@ -31,7 +31,7 @@ public class TC02_loginStepDefinition {
 
     @Then("user logins successfully and redirected to home page")
     public void user_logins_successfully() {
-        Assert.assertEquals(Hooks.driver.getCurrentUrl(),"https://demo.nopcommerce.com/");
+        Assert.assertEquals(Hooks.driver.getCurrentUrl(), "https://demo.nopcommerce.com/");
         Assert.assertTrue(Hooks.driver.findElement(By.cssSelector("a[class='ico-account']")).isDisplayed());
 
     }

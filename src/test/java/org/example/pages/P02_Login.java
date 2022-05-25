@@ -6,20 +6,20 @@ import org.openqa.selenium.WebElement;
 
 public class P02_Login {
 
-    public WebElement emailAddress(){
+    public WebElement emailAddress() {
         return Hooks.driver.findElement(By.id("Email"));
     }
 
-    public WebElement password(){
+    public WebElement password() {
         return Hooks.driver.findElement(By.id("Password"));
     }
 
-public void loginData(String email, String password){
-emailAddress().sendKeys(email);
-password().sendKeys(password);
-}
+    public void loginData(String email, String password) {
+        emailAddress().sendKeys(email);
+        password().sendKeys(password);
+    }
 
-public WebElement loginBtn(){
+    public WebElement loginBtn() {
         return Hooks.driver.findElement(By.xpath("//*[@class='button-1 login-button']"));
-}
+    }
 }

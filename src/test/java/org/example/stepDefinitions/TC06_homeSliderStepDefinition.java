@@ -33,7 +33,7 @@ public class TC06_homeSliderStepDefinition {
 
     @Then("related product page opens for second slider")
     public void related_product_page_opens_for_second_slider() {
-        WebDriverWait wait = new WebDriverWait(Hooks.driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(Hooks.driver, Duration.ofSeconds(5));
         boolean conditionChecker = wait.until(ExpectedConditions.urlContains("https://demo.nopcommerce.com/iphone-6"));
         Assert.assertTrue(conditionChecker);
     }

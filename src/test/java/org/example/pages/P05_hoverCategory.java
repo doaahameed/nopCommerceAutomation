@@ -6,12 +6,12 @@ import org.example.stepDefinitions.Hooks;
 
 public class P05_hoverCategory {
 
-    public WebElement electronicsMenu(){
+    public WebElement electronicsMenu() {
         WebElement electronics = Hooks.driver.findElement(By.cssSelector("ul[class='top-menu notmobile'] a[href='/electronics']"));
         return electronics;
     }
 
-    public WebElement cameraSubCategory(){
+    public WebElement cameraSubCategory() {
         WebElement cameraPhotosSub = Hooks.driver.findElement(By.cssSelector("ul[class='top-menu notmobile'] a[href='/camera-photo']"));
         return cameraPhotosSub;
     }
